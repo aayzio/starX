@@ -1,0 +1,87 @@
+StarX
+    To extend capabilities of starUML
+    As a user
+    I want to create extensions for starUML.
+    
+Scenario?
+
+This is not supposed to be gherkin. It's an example mapping session!
+
+Vocab:
+ - Stories (Yellow)
+ - Rules (Blue)
+ - Examples (Green)
+ - Questions (Red)
+
+What functionality do I want?
+
+Story 1
+ - When I create class diagrams, a major source of annoyance is that I cannot bulk add methods/attributes. I have to either type each one out or copy paste one by one. I want to provide the header file code and automatically create/append to a class diagram.
+
+ > Rules:
+    - Functions must be added following the UML conventions. <visibility> [qualifier] <function name> ([param direction] <param name>: <param type> [= default value],...): <return type>
+    - Function can be abstract/static. The property must be respected in diagram (ie abstract should be italic and static should be underlined).
+
+ > Questions:
+    - Header file parsing?
+    - Parsing for each lang or just cpp? Probably a better idea to start with cpp and then add each lang support.
+    - Maybe use yacc/lex or any existing parser.
+
+Story 1.1
+ - At the very least provide a list of methods to be bulk added.
+
+ > Rules:
+    - Functions to be added must follow UML conventions. <visibility> [qualifier] <function name> ([param direction] <param name>: <param type> [= default value],...): <return type>
+
+
+Story 2
+ - When I work with starUML, the default (esp in class diagrams) word wrap setting is off. When word wrap is off it doesn't allow a class to be resized beyond a limit and it gets very annoying. I'd like to be able to keep it on so that I can freely resize my classes.
+
+ > Rules:
+    - A word wrap setting default should affect whole application instance.
+
+ > Questions:
+    - How to add a session wide preference?
+      Check the docs.
+
+Story 3
+ - If I mistakenly add a class instead of interface, I want to be able to change the class to interface and vice versa.
+
+ > Rules:
+    - Member details of the uml instance (class/interface) should not be changed only the uml type should be changed.
+    - Project file should not be left in a corrupt state.
+    
+  > Questions:
+     - How to modify the uml instance other than editing the .mdj xml?
+       Check the docs.
+
+Story 4
+ - I want the methods of an interface to be abstract by default. If it's cpp, abstract virtual.
+
+ > Rules:
+    - Abstract methods by default for interface, should affect whole application instance.
+
+ > Questions:
+    - How to add a session wide preference for a particular uml type?
+
+Story 4.1
+ - I want to be able to select a bunch of methods and make them virtual/abstract or edit them in bulk.
+
+ > Rules:
+    - Multi-selection must be supported across classes/interfaces.
+    - Changes must not affect other elements.
+
+ > Questions:
+    - How to acess selected element and add a command that takes multiple selections.
+
+ Story 5
+ - I want to be able to specify, in/out direction of parameter by the prefix i or o in parameter name.
+
+ > Rules:
+    - i for in, o for out, io for in/out.
+
+ > Questions:
+    -??
+
+Story 6
+ - I want the zoom setting and the page focus area to be specific to the page instead of specific to whole session.
