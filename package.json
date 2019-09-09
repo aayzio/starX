@@ -1,0 +1,23 @@
+{
+  "name": "starX",
+  "version": "1.0.0",
+  "description": "Extensions for StarUML (staruml.io).",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aayzio/starX.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aayzio/starX/issues"
+  },
+  "homepage": "https://github.com/aayzio/starX#readme",
+  "devDependencies": {
+    "cucumber": "^5.1.0"
+  }
+}
