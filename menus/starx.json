@@ -1,0 +1,15 @@
+{
+  "menu": [
+    {
+      "id": "tools",
+      "submenu": [
+        {
+          "label": "starX",
+          "id": "tool.starX",
+          "command": "starx:add-multiple-members"
+        }
+      ]
+    }
+  ]
+}
+
